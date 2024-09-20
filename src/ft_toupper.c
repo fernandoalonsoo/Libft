@@ -6,9 +6,11 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:37:12 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 15:37:13 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:29:36 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 int toupper(int c)
 {

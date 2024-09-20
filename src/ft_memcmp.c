@@ -6,10 +6,11 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:13 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 15:36:14 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:35:53 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft.h"
 
 int memcmp(const void *s1, const void *s2, size_t n)
 {

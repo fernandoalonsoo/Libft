@@ -6,9 +6,11 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:35 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 15:56:05 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:27:42 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 size_t	ft_strlen(const char *s)
 {

@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/17 15:34:17 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/18 18:26:44 by fealonso         ###   ########.fr       */
+/*   Created: 2024/09/19 18:01:19 by fealonso          #+#    #+#             */
+/*   Updated: 2024/09/19 18:27:28 by kali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isdigit(int c)
+static char *ft_copy(char *dest, const char *src)
 {
-	if ('1' <= c && c <= '9')
+	size_t	i;
+
+	i = 0;
+	while (src[i])
 	{
-		return (1);
+		dest[i] = src[i];
+		i++;
 	}
-	return (0);
+	dest[i] = '\0';
+	return (dest);
+}
+
+char    *ft_strdup(const char *src)
+{
+    char    *p;
+
+    // Reservamos memoria en el nuevo puntero (includo el caracter nulo)
+    p = malloc(ft_strlen(src) + 1);
+
+    if (p)
+        ft_copy(p, src);
+    return (p);
 }

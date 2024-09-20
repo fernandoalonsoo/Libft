@@ -6,11 +6,11 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:33:48 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 15:34:58 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:26:31 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
+#include "../libft.h"
 
 int	ft_isalpha(int c)
 {

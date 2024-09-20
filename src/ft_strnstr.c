@@ -6,9 +6,12 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:40 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 15:37:33 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:36:46 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
+
 
 char * ft_strnstr(const char *big, const char *little, size_t len)
 {

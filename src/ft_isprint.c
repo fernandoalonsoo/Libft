@@ -6,9 +6,11 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:01 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 15:36:02 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/18 18:27:28 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 int	ft_isprint(int c)
 {
