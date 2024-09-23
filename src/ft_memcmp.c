@@ -6,27 +6,26 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:13 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/18 18:35:53 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/22 21:20:16 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    int i;
-    unsigned char * p;
-    unsigned char * q;
+	unsigned char	*p;
+	unsigned char	*q;
+	int				i;
 
-    i = 0;
-    p = (unsigned char *) s1;
-    q = (unsigned char *) s2;
-
-    while(i < n)
-    {
-        if (p[i] != q[i])
-            return (p[i] - q[i]);
-        i++;
-    }
-    return (0);
+	i = 0;
+	p = (unsigned char *) s1;
+	q = (unsigned char *) s2;
+	while (i < n)
+	{
+		if (p[i] != q[i])
+			return (p[i] - q[i]);
+		i++;
+	}
+	return (0);
 }

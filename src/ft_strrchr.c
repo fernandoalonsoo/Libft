@@ -6,23 +6,24 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:37:07 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 15:37:08 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/22 22:50:43 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strrchr(char *s, int c)
+#include "../libft.h"
+
+char	*ft_strrchr(const char *str, int c)
 {
-    int i;
-    char *last;
+	int	i;
 
-    i = 0;
-    last = NULL;
-    while (s[i] != '\0')
-    {
-        if (s[i] == c)
-            last = &s[i];
-        i++;
-    }
-
-    return (last);
+	i = ft_strlen(str) - 1;
+	if (!(char)c)
+		return ((char *) &str[ft_strlen(str)]);
+	while (i >= 0)
+	{
+		if (str[i] == (char)c)
+			return ((char *) &str[i]);
+		i--;
+	}
+	return (NULL);
 }

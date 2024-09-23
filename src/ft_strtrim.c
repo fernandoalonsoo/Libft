@@ -6,13 +6,45 @@
 /*   By: kali <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 19:16:17 by kali              #+#    #+#             */
-/*   Updated: 2024/09/20 06:48:40 by kali             ###   ########.fr       */
+/*   Updated: 2024/09/22 20:34:56 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+static int	is_set(char c, char const *set)
 {
+	int	i;
 
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*start;
+	char	*end;
+	char	*result;
+	size_t	len;
+
+	if (!s1 || !set)
+		return (NULL);
+	start = (char *) s1;
+	while (*start && is_set(*start, set))
+		start++;
+	end = (char *)s1 + ft_strlen(s1);
+	while (end > start && is_set(*(end - 1), set))
+		end--;
+	len = end - start;
+	result = (char *)malloc(len + 1);
+	if (!result)
+		return (NULL);
+	ft_strlcpy(result, start, len + 1);
+	return (result);
 }

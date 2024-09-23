@@ -6,13 +6,13 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:16 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/17 16:33:15 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/22 21:12:01 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*p;
 	unsigned char	*q;

@@ -6,16 +6,15 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:37:10 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/18 18:29:54 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/22 21:14:14 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int tolower (int c)
+int	ft_tolower(int c)
 {
-    if ('A' < c && c < 'Z')
-        c += 32;
-
-    return (c);
+	if ('A' <= c && c <= 'Z')
+		c += 32;
+	return (c);
 }

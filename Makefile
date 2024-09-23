@@ -6,7 +6,7 @@
 #    By: fealonso <fealonso@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 17:35:23 by fealonso          #+#    #+#              #
-#    Updated: 2024/09/18 18:21:43 by fealonso         ###   ########.fr        #
+#    Updated: 2024/09/22 23:37:15 by fealonso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,20 +54,20 @@ SRC = src/ft_isalpha.c \
       src/ft_strjoin.c \
       src/ft_strtrim.c \
       src/ft_split.c \
-      src/ft_itoa.c \
-      src/ft_strmapi.c \
+	  src/ft_itoa.c \
+    #src/ft_strmapi.c \
       src/ft_striteri.c \
       src/ft_putchar_fd.c \
       src/ft_putstr_fd.c \
       src/ft_putendl_fd.c \
-      src/ft_putnbr_fd.c
+	  src/ft_putnbr_fd.c
 
 
 # Los archivos generados al compilar pasarán de ser .c en .o
 OBJ = ${SRC:.c=.o}
 
 # Archivos adicionales del bonus
-B_SRC = src/ft_lstnew.c \
+# B_SRC = src/ft_lstnew.c \
 		src/ft_lstadd_front.c \
 		src/ft_lstsize.c \
 		src/ft_lstlast.c \

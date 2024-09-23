@@ -6,13 +6,13 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 18:01:19 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/19 18:27:28 by kali             ###   ########.fr       */
+/*   Updated: 2024/09/22 20:34:40 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static char *ft_copy(char *dest, const char *src)
+static char	*ft_copy(char *dest, const char *src)
 {
 	size_t	i;
 
@@ -26,14 +26,12 @@ static char *ft_copy(char *dest, const char *src)
 	return (dest);
 }
 
-char    *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
-    char    *p;
+	char	*p;
 
-    // Reservamos memoria en el nuevo puntero (includo el caracter nulo)
-    p = malloc(ft_strlen(src) + 1);
-
-    if (p)
-        ft_copy(p, src);
-    return (p);
+	p = malloc(ft_strlen(src) + 1);
+	if (p)
+		ft_copy(p, src);
+	return (p);
 }
