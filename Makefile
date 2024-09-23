@@ -6,7 +6,7 @@
 #    By: fealonso <fealonso@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 17:35:23 by fealonso          #+#    #+#              #
-#    Updated: 2024/09/22 23:37:15 by fealonso         ###   ########.fr        #
+#    Updated: 2024/09/23 10:28:03 by fealonso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ SRC = src/ft_isalpha.c \
       src/ft_strtrim.c \
       src/ft_split.c \
 	  src/ft_itoa.c \
-    #src/ft_strmapi.c \
+	  src/ft_strmapi.c \
       src/ft_striteri.c \
       src/ft_putchar_fd.c \
       src/ft_putstr_fd.c \
