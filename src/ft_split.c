@@ -6,17 +6,30 @@
 /*   By: fealonso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 12:30:47 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/22 20:33:54 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:38:56 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
+static void	free_array(char **array, int j)
+{
+	int	i;
+
+	i = 0;
+	while (i < j)
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+}
+
 static int	count_words(char const *s, char c)
 {
-	int		i;
-	int		count;
-	int		in_word;
+	int	i;
+	int	count;
+	int	in_word;
 
 	i = 0;
 	count = 0;
@@ -50,21 +63,12 @@ static char	*copy_word(const char *s, int start, int end)
 	return (word);
 }
 
-char	**create_array(int count)
+static int	process_split(const char *s, char c, char **array)
 {
-	return ((char **)malloc((count + 1) * sizeof(char *)));
-}
+	int	i;
+	int	j;
+	int	in_word;
 
-char	**ft_split(char const *s, char c)
-{
-	char	**array;
-	int		i;
-	int		j;
-	int		in_word;
-
-	array = create_array(count_words(s, c));
-	if (!s || !(array))
-		return (NULL);
 	i = 0;
 	j = 0;
 	in_word = -1;
@@ -74,11 +78,31 @@ char	**ft_split(char const *s, char c)
 			in_word = i;
 		else if ((s[i] == c || i == (int)ft_strlen(s)) && in_word >= 0)
 		{
-			array[j++] = copy_word(s, in_word, i);
+			array[j] = copy_word(s, in_word, i);
+			if (!array[j++])
+			{
+				free_array(array, j);
+				return (1);
+			}
 			in_word = -1;
 		}
 		i++;
 	}
 	array[j] = 0;
-	return (array);
+	return (0);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+
+	if (!s)
+		return (NULL);
+	array = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!array)
+		return (NULL);
+	if (process_split(s, c, array) == 0)
+		return (array);
+	else
+		return (NULL);
 }

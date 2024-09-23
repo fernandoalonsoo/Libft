@@ -6,7 +6,7 @@
 #    By: fealonso <fealonso@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 17:35:23 by fealonso          #+#    #+#              #
-#    Updated: 2024/09/23 10:28:03 by fealonso         ###   ########.fr        #
+#    Updated: 2024/09/23 11:48:07 by fealonso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,17 +66,6 @@ SRC = src/ft_isalpha.c \
 # Los archivos generados al compilar pasarán de ser .c en .o
 OBJ = ${SRC:.c=.o}
 
-# Archivos adicionales del bonus
-# B_SRC = src/ft_lstnew.c \
-		src/ft_lstadd_front.c \
-		src/ft_lstsize.c \
-		src/ft_lstlast.c \
-		src/ft_lstadd_back.c \
-		src/ft_lstdelone.c \
-		src/ft_lstclear.c \
-		src/ft_lstiter.c \
-		src/ft_lstmap.c
-
 B_OBJ = ${B_SRC:.c=.o}
 
 # Opciones de compilacion
@@ -100,10 +89,6 @@ ${NAME}: start ${OBJ} ${INCLUDE}
 # Compilamos los archivos .c en .0 usando gcc y las flags
 %.o: %.c
 	@${CC} ${CCFLAGS} -c -o $@ $<
-
-bonus: start ${B_OBJ} ${INCLUDE}
-	@${LIB} ${NAME} ${B_OBJ}
-	@echo "$(GREEN)Libft compiled with bonus ✓$(NOC)"
 
 # Elimina los archivos objeto .o
 clean:
