@@ -6,7 +6,7 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:13 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/22 21:20:16 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:51:40 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*p;
 	unsigned char	*q;
-	int				i;
+	size_t			i;
 
 	i = 0;
 	p = (unsigned char *) s1;

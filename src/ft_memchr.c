@@ -6,7 +6,7 @@
 /*   By: fealonso <fealonso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 15:36:07 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/22 22:55:09 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/25 14:53:12 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*p;
-	int				i;
+	size_t			i;
 
 	i = 0;
 	p = (unsigned char *)s;

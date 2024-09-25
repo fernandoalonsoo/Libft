@@ -6,7 +6,7 @@
 /*   By: fealonso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 18:11:22 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/23 18:24:28 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/25 15:06:52 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*aux;
 
-	if (!lst || !del)
-		return ;
-	while (*lst)
+	aux = NULL;
+	while (*lst != NULL)
 	{
 		aux = *lst;
-		del(aux -> content);
 		*lst = aux -> next;
+		if (del)
+			del(aux -> content);
 		free(aux);
 	}
 }
