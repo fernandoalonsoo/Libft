@@ -6,7 +6,7 @@
 /*   By: fealonso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 17:57:16 by fealonso          #+#    #+#             */
-/*   Updated: 2024/09/23 18:38:46 by fealonso         ###   ########.fr       */
+/*   Updated: 2024/09/24 09:23:08 by fealonso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_lstsize(t_list *lst)
 	i = 0;
 	if (!p)
 		return (0);
-	while (p -> next != NULL)
+	while (p)
 	{
 		p = p -> next;
 		i++;

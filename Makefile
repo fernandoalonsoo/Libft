@@ -6,7 +6,7 @@
 #    By: fealonso <fealonso@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/18 17:35:23 by fealonso          #+#    #+#              #
-#    Updated: 2024/09/23 18:54:25 by fealonso         ###   ########.fr        #
+#    Updated: 2024/09/24 09:51:25 by fealonso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,6 @@ SRC = src/ft_isalpha.c \
 	   src/ft_isdigit.c \
 	   src/ft_memset.c \
 	   src/ft_strlcpy.c \
-	   src/ft_calloc.c \
 	   src/ft_isprint.c \
 	   src/ft_strchr.c \
 	   src/ft_strlen.c \
@@ -64,6 +63,10 @@ SRC = src/ft_isalpha.c \
 	   src/ft_putendl_fd.c \
 	   src/ft_putnbr_fd.c
 
+# Los archivos generados al compilar pasarán de ser .c en .o 
+
+OBJ = ${SRC:.c=.o} 
+
 B_SRC = src/ft_lstnew.c \
 		src/ft_lstadd_front.c \
 		src/ft_lstsize.c \
@@ -75,7 +78,6 @@ B_SRC = src/ft_lstnew.c \
 		src/ft_lstmap.c
 
 # Los archivos generados al compilar pasarán de ser .c en .o
-OBJ = ${SRC:.c=.o}
 
 B_OBJ = ${B_SRC:.c=.o}
 
